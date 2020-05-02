@@ -23,23 +23,25 @@ public class BinPacking
             if(s - a[i] > 0)
             {
                 s -= a[i];   
-               // continue;              
+                continue;
+               
             }
             else
             {
                 binCount++;
                 s = size;
                 i--;
-            }           
+            }
+            
         }/*
         */
-          System.out.println("Number of bins required: "+binCount);
+          System.out.println("Number of bins required to solve the problem is : "+binCount);
 //        System.out.println("")
     }
 
     public static void main(String args[])
     {
-        System.out.println("BIN - PACKING Algorithm");
+        System.out.println("Bin Packing - kaswan-as04");
         System.out.println("Enter the number of items in Set: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

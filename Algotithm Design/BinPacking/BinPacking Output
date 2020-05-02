@@ -1,0 +1,34 @@
+cd /Users/maverick/NetBeansProjects/BinPacking; JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home "/Applications/NetBeans/Apache NetBeans 11.3.app/Contents/Resources/NetBeans/netbeans/java/maven/bin/mvn" "-Dexec.args=-classpath %classpath BinPacking.BinPacking" -Dexec.executable=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home/bin/java process-classes org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building BinPacking 1.0-SNAPSHOT
+------------------------------------------------------------------------
+
+--- maven-resources-plugin:2.6:resources (default-resources) @ BinPacking ---
+Using 'UTF-8' encoding to copy filtered resources.
+skip non existing resourceDirectory /Users/maverick/NetBeansProjects/BinPacking/src/main/resources
+
+--- maven-compiler-plugin:3.1:compile (default-compile) @ BinPacking ---
+Nothing to compile - all classes are up to date
+
+--- exec-maven-plugin:1.5.0:exec (default-cli) @ BinPacking ---
+Bin Packing - kaswan-as04
+Enter the number of items in Set: 
+5
+Enter 5 items:
+.66
+.33
+.83
+.5
+.33
+Enter the bin size: 
+1.0
+Number of bins required to solve the problem is : 3
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 24.199 s
+Finished at: 2020-04-29T04:21:00-04:00
+Final Memory: 10M/220M
+------------------------------------------------------------------------
