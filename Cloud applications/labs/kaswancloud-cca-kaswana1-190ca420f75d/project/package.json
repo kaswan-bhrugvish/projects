@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-express",
+  "version": "1.0.0",
+  "description": "First Express.js App",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Express",
+    "node.js"
+  ],
+  "author": "Ragini Bhardwaj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "cors": "^2.8.5",
+    "mongodb": "^3.5.9"
+
+
+  }
+}

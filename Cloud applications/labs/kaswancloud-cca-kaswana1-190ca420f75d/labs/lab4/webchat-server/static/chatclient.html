@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <title>CCA-Kaswan</title>
+
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .round {border-radius: 8px;}
+    #response {background-color: #ff9800;} /* Orange */
+  </style>
+
+
+<script src = "https://udayton-cloud.bitbucket.io/clock.js"></script>
+<!-- clock URL -->
+
+<link rel="stylesheet" href=https://udayton-cloud.bitbucket.io/style1.css>
+<!-- external css -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<!-- jquery source -->
+
+ <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socketio = io(); 
+         function send(){
+            var input = $("#data").val();
+            if (input.length == 0) return;
+            socketio.emit("message",input);
+            $("#data").val("");
+        }
+        
+        socketio.on("message",(data) => {
+            $("#response").append(data + "<br>");
+        });
+
+        socketio.on("typing", function(data){
+            $("#typing").html(data);
+            setTimeout(()=>{$("#typing").html("<br>")},500);
+        });
+
+         function checkEnter(event){
+            if (event.keyCode == 13) send();
+        }
+        socketio.on("online",(data) => {
+            $("#online").html(data + "<br>");
+        });
+
+    </script>
+<!--  sockeu.io  -->
+
+<style>
+body {
+  background-image: url('http://www.allwhitebackground.com/images/2/2282.jpg');
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container wrapper">
+    <div id="top">
+        <p style="font-size:18px" style="font-family:verdana" >Web page for Cloud Computation & Application</p>
+   <p style="font-size:16px"  style="font-family:verdana"  > By : Arun Kumar Kaswan {Maverick}</p>
+   <!-- <h3> Email Id : kaswana1@udayton.edu</h3>
+   --> 
+   <div id  = "email" onclick = "showhideEmail()" style="font-size:12px" style="font-family:'Monaco'"> -->Show my email<-- </div>
+   <script src = "email.js" ></script>
+   </div>
+ 
+
+ <div class="wrapper">
+     <div id="menubar" style="font-family: Monaco" >
+         <p style="color:red"> Analog Clock &#128518;</p>
+              <tr><td style="text-align: center;"><canvas id="canvas_tt5ef6e1ff8e7ce" width="200" height="200"></canvas></td></tr>
+              <tr><td style="text-align: center; font-weight: bold"><a href="//24timezones.com/New-York/time" style="text-decoration: none" class="clock24" id="tz24-1593238015-c1179-eyJzaXplIjoiMjAwIiwiYmdjb2xvciI6IkZGRkZGRiIsImxhbmciOiJlbiIsInR5cGUiOiJhIiwiY2FudmFzX2lkIjoiY2FudmFzX3R0NWVmNmUxZmY4ZTdjZSJ9" title="current time in New York" target="_blank" rel="nofollow"> </a></td></tr>
+               </div>
+<script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+
+ <div id="main">
+           
+    <div id="mydiv" style="font-family:verdana"
+        onclick="document.getElementById('mydiv').innerHTML='Clicked time: ' + Date()">
+        Click Here for the current time </div>
+    
+    <div id="digit-clock"></div>
+
+      Chat message:
+       <input name="data" onkeypress="checkEnter(event)"
+                               onkeyup="socketio.emit('typing')" id="data"> 
+            <input class="button round" type="button" value="Send" onclick="send()">
+            <div id="typing"></div>
+            <div id="online"></div>
+            <div id="response"></div>
+        </div> 
+        
+    
+    <script>
+    
+    function displayTime() { 
+        document.getElementById('digit-clock').innerHTML = "Current time: " + new Date();
+    }
+    setInterval(displayTime, 500);
+    </script>
+
+
+<script>
+    var canvas = document.getElementById("analog-clock");
+    var ctx = canvas.getContext("2d");
+    var radius = canvas.height / 2;
+    ctx.translate(radius, radius);
+    radius = radius * 0.90
+    setInterval(drawClock, 1000);
+
+    function drawClock() {
+        drawFace(ctx, radius);
+        drawNumbers(ctx, radius);
+        drawTime(ctx, radius);
+    }
+
+ 
+</script>
+
+</body>
+</html>

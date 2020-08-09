@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-express",
+  "version": "1.0.0",
+  "description": "FIrst Express.js App",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/kaswancloud/cca-kaswana1.git"
+  },
+  "keywords": [
+    "Express",
+    "Node.js"
+  ],
+  "author": "Kaswan",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kaswancloud/cca-kaswana1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

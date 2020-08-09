@@ -1,0 +1,22 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "login fun",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "kaswan",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/kaswancloud/cca-kaswana1.git"
+  },
+  "homepage": "https://bitbucket.org/kaswancloud/cca-kaswana1#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  }
+}
