@@ -25,15 +25,3 @@ Email: kaswana1@udayton.edu
 UDID: 1016434760
 ```
 -----------------------------------------
-
-
-*  **Member 2 Info**
-
-```
-Name: RAGINI BHARDWAJ
-
-Email: bhardwajr1@udayton.edu
-
-UDID: 1016423140 
-```
------------------------------------------
